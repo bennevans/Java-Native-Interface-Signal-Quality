@@ -2,14 +2,14 @@
 
 public class JNISignalQuality{
 
-	public native String nativeSignalQuality();
+	public native int nativeSignalQuality();
 
 	static	{
 		System.loadLibrary("SignalQuality");
 	}
 
 	public int getSignalQuality(){
-		return Integer.parseInt(nativeSignalQuality());
+		return nativeSignalQuality();
 	}
 
 	public static void main(String args[]){

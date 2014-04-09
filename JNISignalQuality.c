@@ -21,7 +21,7 @@
 
 
 
-JNIEXPORT jstring JNICALL JAVA_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jobject obj){
+JNIEXPORT jint JNICALL JAVA_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jobject obj){
 
 	HANDLE hClient = NULL;
 	DWORD dwMaxClient = 2;
@@ -42,12 +42,6 @@ JNIEXPORT jstring JNICALL JAVA_JNISignalQuality_nativeSignalQuality(JNIEnv *env,
 	WlanQueryInterface(hClient, &pIfInfo->InterfaceGuid, wlan_intf_opcode_current_connection, NULL, &connectInfoSize, (PVOID *)&pConnectInfo, &opCode);
 
 	unsigned long sQuality = pConnectInfo->wlanAssociationAttributes.wlanSignalQuality;
-	char* buf;
 
-	sprintf(buf, 5, "%lu", sQuality);
-
-	jstring ret = (*env)->NewStringUTF(env, buf);
-	free(buf);
-
-	return ret;
+	return sQuality;
 }

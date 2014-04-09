@@ -10,9 +10,9 @@ extern "C" {
 /*
  * Class:     JNISignalQuality
  * Method:    nativeSignalQuality
- * Signature: ()Ljava/lang/String;
+ * Signature: ()I
  */
-JNIEXPORT jstring JNICALL Java_JNISignalQuality_nativeSignalQuality
+JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality
   (JNIEnv *, jobject);
 
 #ifdef __cplusplus
