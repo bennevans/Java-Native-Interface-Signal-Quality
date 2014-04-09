@@ -1,4 +1,7 @@
 
+#include <jni.h>
+#include "JNISignalQuality.h"
+
 #include <stdio.h>
 #include <tchar.h>
 
