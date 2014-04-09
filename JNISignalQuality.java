@@ -5,7 +5,7 @@ public class JNISignalQuality{
 	public native int nativeSignalQuality();
 
 	static	{
-		System.loadLibrary("SignalQuality");
+		System.loadLibrary("JNISignalQuality");
 	}
 
 	public int getSignalQuality(){
