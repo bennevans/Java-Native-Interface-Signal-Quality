@@ -1,4 +1,4 @@
-﻿Build started 4/9/2014 11:13:19 AM.
+﻿Build started 4/9/2014 11:33:28 AM.
      1>Project "C:\Users\Ben Evans\jni\testbuild.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Java\jdk1.7.0_03\include" /I"C:\Program Files (x86)\Java\jdk1.7.0_03\include\win32" /Zi /nologo /W0 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt JNISignalQuality.c

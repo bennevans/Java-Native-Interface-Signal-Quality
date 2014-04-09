@@ -39,14 +39,14 @@ JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jo
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanOpenHandle\n");
-		exit(1);
+		return 101;
 	}
 
 	dwResult = WlanEnumInterfaces(hClient, NULL, &pIfList);
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanEnumInterfaces\n");
-		exit(1);
+		return 102;
 	}
 
 	pIfInfo = (WLAN_INTERFACE_INFO *)& pIfList->InterfaceInfo[0];
@@ -57,7 +57,7 @@ JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jo
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanQueryInterface\n");
-		exit(1);
+		return 103;
 	}
 
 	unsigned long sQuality = pConnectInfo->wlanAssociationAttributes.wlanSignalQuality;
