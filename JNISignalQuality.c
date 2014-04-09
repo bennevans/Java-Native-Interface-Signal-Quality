@@ -39,7 +39,6 @@ JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jo
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanOpenHandle\n");
-		getchar();
 		exit(1);
 	}
 
@@ -47,7 +46,6 @@ JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jo
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanEnumInterfaces\n");
-		getchar();
 		exit(1);
 	}
 
@@ -59,7 +57,6 @@ JNIEXPORT jint JNICALL Java_JNISignalQuality_nativeSignalQuality(JNIEnv *env, jo
 
 	if (dwResult != ERROR_SUCCESS){
 		printf("Error with WlanQueryInterface\n");
-		getchar();
 		exit(1);
 	}
 
