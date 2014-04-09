@@ -8,7 +8,7 @@ public class JNISignalQuality{
 		System.loadLibrary("JNISignalQuality");
 	}
 
-	public int getSignalQuality(){
+	public int getSignalQuality() throws JNISignalQualityException{
 		int ret = nativeSignalQuality();
 		if(ret == 101){
 			throw new JNISignalQualityException("Error Opening Handle!");
